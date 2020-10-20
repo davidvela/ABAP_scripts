@@ -15,10 +15,13 @@ https://dotabap.org/
 # Eclipse ADT Shortcuts
 
     * shift F1              pretty printer 
-    * control F2            checker 
+    * control F2            check dev. obj. 
     * control F3            activate 
     * control shift F10     run unit test 
     * control 1             options: rename, generate methods, definitions ... 
+    * control shift L       show all available shortcuts 
+    * alt left / right      forward / backward navigation
+    * Search and help -> F1 show context; F2 -> tooltip descr. 
     * eclipse - preferences shortcuts: 
          * Collapse all             control Shift [ 
          * Expand all               control shift ]
