@@ -14,7 +14,7 @@ ENDCLASS.
 
 CLASS zcl_hello_world_1234 IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    out->write( |Hello World ( { cl_abap_context_info=>get_user_alias( ) } )| )
+    out->write( |Hello World ( { cl_abap_context_info=>get_user_alias( ) } )| ).
   ENDMETHOD. 
 
 ENDCLASS. 
