@@ -4,8 +4,8 @@
 01. The Business Scenario
 02. Creating the Database Tables
 03. Creating the Core Data Services (CDS) Data Model
-04. Defining the CDS Data Model Projection
-06. Enriching the Projected Data Model with UI Metadata
+04. Defining the CDS Data Model Projection 
+05. Enriching the Projected Data Model with UI Metadata
 06. Creating and Previewing the OData UI Service
 07. Implementing Basic Authorizations
 
@@ -58,6 +58,70 @@ right click on travel table and select new data definition...
 display data in ADT allow you to navigate to othre data -- associations
 make travel view as root and set travel view as parent for booking view
 
-## 03 CDS Projections
+## 04 CDS Projections
+CDS-based data model projection -- allows a denormalization and enrichment of the underlying data model. -- additional data and some consumption and object strucutre-related metadata
+``` define root view entity ZC_XXX as projection on YYY as Y ```
+``` { key key1, @semantics col1, col2, _association1 : xxx } ```
+
+``` @Search.defaultSearchElement: true Col1 ``` 
+``` @Consumtion.valueMapDefinition: [{entity:{name: 'zzzz', element: 'colID'}}] ```
+-- 
+CDS Metadata Extension (MDEs) -- separated from busines object related annotations 
+stablish conjusction of a field with its descriptive language independent text units @Consumption annotations. 
+
+-- execise projections: S/4 HANA namespace 
+Consumption Views -- Namespace follow wiht letter C
+Select CDS view -> new Data Definition -- ZC_XXXX 
+- **ZC_TRAVEL_1234**  : Travel BO Projection  view -- Define Projection View Template
+- **ZC_BOOKING_1234** : Booking BO Projection view -- Define Projection View Template
+
+metadata extensions: 
+- @AccessControl.authorizationCheck: #CHECK
+- @Metadata.allowExternsion: true
+- @Search.searhcable: true
+
+
+## 05 CDS Projection Enrichment with UI Metadata 
+DATA MODEL PROJECTION 
+CDS metadata Extension MDE: 
+* separation of concerns 
+    - Keep view definition distinct from UI specific annotations 
+    - Use of View Definition with various set of metadata
+* simplied change management 
+    - change annotations without modifying underlying CDS entitiy 
+
+more than one CDS Metadata Extension for 1 CDS View 
+
+-- ex
+1. right click in CDS View: ZI_RAP_XXX and select new metadata Extension
+    - ZC_RAP_TRAVEL_123 : UI annotations for ZC_RAP_Travel_#### -- Annotate View template
+    - ZC_RAP_BOOKING_123: UI annotations for ZC_RAP_Booking_### -- Annotate View template
+
+layer -> priority of the metadata, #CORE: Lowest priotity #CUSTOMER the highest
+@UI Header data 
+@UI.Facets - Navigation, position and level for each element 
+
+Projection -> open active annotations
+
+
+# 06 - OData UI service 
+SERVICE DEFINITION - define scope 
+SERVICE BINFING - bind to scenario and protocol *ODATA
+PREVIEW 
+
+-- ex: 
+1. right click on travel BO projection view ZC_RAP_xxxx > New Service Definition 
+    - ZUI_RAP_Travel_1234  Serv Def for ZC_RAP_Travel  Define Service Template
+    ``` { expose CDS entities/Projections/views as alias; ... } ``` 
+2. right click in service definition and click in **New Service Binding** 
+    - ZUI_RAP_TRAVEL_02_1234 : OData V2 UI Service for SAP Fiori Travel App -- Binding type ODATA V2 UI
+    - different versions of Service Binding
+3. Preview Button -> show an SAPUI5 App - Navigate to Object Page 
+    - Search is apply into several different columns 
+
+## 07 Authorizations/Roles
+
+
+
 
 # end 
