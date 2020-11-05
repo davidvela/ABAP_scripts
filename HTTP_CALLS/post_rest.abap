@@ -96,7 +96,7 @@ METHOD post_rest_call.
             ENDIF.
     
             DATA(lx_string) =  lo_http_client->response->get_data( ).
-    
+            DATA(response)  =  lo_http_client->response->get_cdata( ).
     
             lo_http_client->response->get_status( IMPORTING code = DATA(l_code)   reason = DATA(l_reason) ).
             IF l_code <> 200.
