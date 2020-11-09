@@ -154,7 +154,40 @@ New Filter Editing Status : All, Only Draft ...
 DEMO -- Fiori app with Draft 
 
 # 08 Troubleshooting 
-debug
+ADT Troubleshooting tools for ABAP
+1. ABAP debugger -> Break point 
+2. Dynamic Logpoints
+3. ABAP Profiling 
+4. Gateway Error Log -> ADT reader 
+5. Error Log
+6. ADT Feed Reader
+7. Brower's Debug Console.  (F12 - Network Calls)
 
+ADT Troubleshooting tools for ABAP CDS
+1. Data Preview 
+2. Dictionary Log -> Activation of CDS views
+3. Annotation Propagation  -> annottions 
+4. Active Annotations 
+5. ACtivation Graph
+
+DEMO: 
+* Behaviour implementation class -> acceptTravel Action implementation breakpoint 
+* tky - draft and not draft records 
+* breakpoint in get_features -> keys -> all active records and then draft records
+* variable **F2** -> **info - ABAP Element info**
+CDS Views
+* Relationship Explorer -> show relationship between entities (link with Editor active)
+* open behaviour definition -> open method implementatoin from Relationshiop explorer -> used objects 
+Browser F12 button: -> Network -> monitor HTTP request 
+* filter odata -> $metadata Status 304 Not modified -> file taken from cache
+* 2 file annotations file > XML annotations 
+* Go button to perform query -> $batch /// travelPrepare -> acitvate -> getTravel 
+ADT 
+* travel projection view -> data explorer ->  show entries -> Navigate between association
+* show distint values right click // quick filter 
+* copy all rows as ABAP value statement -> copy all values in ABAP Syntax
+* SQL Console -> define sql statement
+Active annotations -> Valid Active annotations; actions, 
+ 
 
 # end 
