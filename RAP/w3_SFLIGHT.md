@@ -1,4 +1,4 @@
-# SFLIGHT
+# W3 - SFLIGHT
 **Simplified flight data model for this openSAP course**   
 01. The Enhanced Business Scenario
 02. Defining the Basic Business Object Behavior (BOB)
