@@ -1,4 +1,4 @@
-# W4 - SFLIGHT
+# W4 - SFLIGHT - brown field
 levarage existing busines logic: TRAVEL and BOOKING
 CRUD operations reused in existing logic like BAPI-like FM 
 legacy UI 

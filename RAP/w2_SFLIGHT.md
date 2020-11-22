@@ -1,4 +1,4 @@
-# SFLIGHT
+# SFLIGHT - green field
 **Simplified flight data model for this openSAP course**
     
 01. The Business Scenario
