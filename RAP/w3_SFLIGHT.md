@@ -166,7 +166,7 @@ ADT Troubleshooting tools for ABAP
 ADT Troubleshooting tools for ABAP CDS
 1. Data Preview 
 2. Dictionary Log -> Activation of CDS views
-3. Annotation Propagation  -> annottions 
+3. Annotation Propagation  -> annotations 
 4. Active Annotations 
 5. ACtivation Graph
 
