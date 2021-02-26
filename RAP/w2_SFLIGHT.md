@@ -10,6 +10,15 @@
 07. Implementing Basic Authorizations
 
 **code spnippets** 
+``` CDS view        = I  : Interface view, basic & composite views         ```
+``` CDS Projection  = C  : Consumption View                                 ```
+``` CDS UI Metadata = UI : User Interface                                   ```
+``` CDS ...         = A  : Remote API View                                   ```
+``` P :  Private VDM View            ```
+``` E :  Extension include View            ```
+``` X :  VDM Extension View            ```
+
+
 
 ## 02 -- creating DB tables: 
 new package: ZRAP_TRAVEL_1234
@@ -28,7 +37,7 @@ Add existing package: /DMO/FLIGHT
 ## 03 -- create CDS Data Model - BO 
 
 - COMMMON DATA MODEL:   declarative approach for defining domain-specific semantically rich data models close to conceptual thinking 
-                        Making data models easier to define, understand and query 
+Making data models easier to define, understand and query 
 - IMPROVED PORGRAMMING MODEL: offers rich set of built-in-funcitons and expressions and has its own data controlled language to restrict access to the data 
     * relations between business entities on data model level -> can be define using CDS associations
     * domain specific semantics can be added to data models -> CDS annotations
@@ -69,7 +78,7 @@ CDS-based data model projection -- allows a denormalization and enrichment of th
 CDS Metadata Extension (MDEs) -- separated from busines object related annotations 
 stablish conjusction of a field with its descriptive language independent text units @Consumption annotations. 
 
--- execise projections: S/4 HANA namespace 
+-- exercise projections: S/4 HANA namespace 
 Consumption Views -- Namespace follow wiht letter C
 Select CDS view -> new Data Definition -- ZC_XXXX 
 - **ZC_TRAVEL_1234**  : Travel BO Projection  view -- Define Projection View Template
