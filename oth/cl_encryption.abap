@@ -126,7 +126,7 @@ FORM enc_byte2byte.
   SKIP.
 ENDFORM.
 
-*&———————————————————————** Decryption – Bytes to Bytes*&———————————————————————* 
+*&———————————————————————** Decryption – Bytes to Bytes*&———————————————————————*
 FORM dec_byte2byte.
   WRITE 'Decryption – Bytes TO Bytes'.
   v_ac_xstring = '004E00650074005700650061007600650072'.
@@ -140,3 +140,18 @@ FORM dec_byte2byte.
   WRITE:/ 'Decrypted String: ', v_de_xstring.
   SKIP.
 ENDFORM.
+
+form other_methord..
+* Secure store
+*    cl_sec_sxml_writer=>encrypt() / decrypt()
+*SSF_KRN_ENVELOPE function for encrypt and SSF_KRN_DEVELOPE for decrypt.
+
+* encrypt files in sap with public key installed in the OS
+data: l_file type string,
+      opcom type string.
+
+open dataset l_file for output in text mode encoding utf-8
+filter opcom. " 'gpg -e -r "name"
+"behind name you have a public key - Operating System
+
+endform.
