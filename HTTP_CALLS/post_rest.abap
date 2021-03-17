@@ -42,7 +42,15 @@ METHOD post_rest_call.
             ls_url   = 'https://prod_server.com/'  && 'RESTAdapter/msdynamics/' && i_url.  "load balancer
             l_dest   = 'PIX_REST_ADAPTER'.
         ENDCASE.
-    
+        
+        " dev: https://host/odata/v2/
+        " Candidate
+        " ?filter= xxx eq '' 
+        " ?filter=contains(xxx,'freds')
+        " $filter=substringof('sites/my folder/subfolder', FileRef) eq true  "odata v2
+        "http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374625
+
+
         TRY.
     
             IF 1 = 2.

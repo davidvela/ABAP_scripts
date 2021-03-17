@@ -24,3 +24,6 @@ DATA: BEGIN OF menu,
 
 * Deserialization of JSON to get the session id
 /ui2/cl_json=>deserialize( EXPORTING json = lv_string  pretty_name = /ui2/cl_json=>pretty_mode-none CHANGING data = menu ).
+
+* Serialization of Struct to JSON
+lv_string  = /ui2/cl_json=>serialize( EXPORTING data = menu pretty_name = /ui2/cl_json=>pretty_mode-none ).
