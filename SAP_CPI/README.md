@@ -30,3 +30,50 @@ https://blogs.sap.com/2020/10/21/connecting-to-azure-blob-storage-from-sap-cloud
 Maven project: 
 
 ## REST API 
+
+# CPI / PI 
+change ESR in SAP : 
+SPROXY -> Utilities -> settings -> Proxy Generation tab -> option: Enterprise Service Browser = ESR Browser
+
+**CPI auth_client** 
+https://blogs.sap.com/2018/03/12/part-1-secure-connectivity-oauth-to-sap-cloud-platform-integration/
+
+## CPI Adapters
+https://tools.hana.ondemand.com/#cloudintegration
+Eclipse Platform	Oxygen (4.7) 
+https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-jee-oxygen-3a
+https://tools.hana.ondemand.com/oxygen
+SAP Cloud Integration Tools
+
+## Apache Camel 
+Camel Adapters: 
+https://github.com/apache/camel/tree/master/components
+https://camel.apache.org/components/latest/
+
+
+## SOAP -- tocdes
+https://answers.sap.com/questions/2434806/xi-monitoring-transaction-code.html
+sxmb_ifr-- launch integration builder/ configuration
+**Proxy Generation**
+SPROXY--Proxy generation
+
+**Monitering features:**
+sxmb_moni-- monitering of messages
+SXMB_MONI_BPE--Business process monitering
+SXMS_SAMON--- monitor for sync-async communication
+
+**Adminsitration of XI**
+sxmb_adm-- Administration
+
+**QUEUE MONITORING**
+SMQ1 Outbound queue
+SMQ2 Inbound Queue
+
+**IDoc's& RFC's related**
+idx1, idx2 for IDoc meta data
+SM58--RFC error Log
+
+**Others**
+SWELS---Event trace switching on and off.
+SXI_MAPPING_TEST To test mappings
+SXI_CACHE To check directory cache
