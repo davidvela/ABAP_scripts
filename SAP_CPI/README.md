@@ -5,6 +5,35 @@ Index:
 roles: https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/en-US/5d46e56550a048e99995f23e1e20083a.html
 
 # Projects:
+
+## Connect CPI to Dynamics
+
+* 1 get token 
+* 2 set up header token and do call.
+
+form data issues and anomaly:
+https://blogs.sap.com/2019/11/14/what-is-form-data-and-how-to-send-it-from-sap-cloud-platform-integration-cpi/
+https://blogs.sap.com/2019/02/25/quick-trick-sci-fetch-token-oauth-in-the-iflow/
+
+
+https://stackoverflow.com/questions/44305351/how-do-you-send-data-in-a-request-body-using-httpurlconnection
+https://gist.github.com/vladfau/c6b6debd5903dcbf2308162337b1a323
+
+
+### ISSUE: OAUTH2 in CPI with Secret Key. 
+CPI converts to ASCII Hexadecimal the following characters: 
+~ => 126 => %7E
+! => 33  => %21 
+
+solution: 
+1. Change secret key and avoid those characters
+2. custom iFlow in CPI 
+3. Create OSS ticket to SAP 
+
+https://www.browserling.com/tools/text-to-ascii
+https://www.rapidtables.com/convert/number/decimal-to-hex.html
+
+
 ## Push File to azure blob
 https://blogs.sap.com/2019/08/30/how-to-connect-azure-using-scpi-upload-file-to-azure-blob/
 Upload_File_to_azure.groovy
