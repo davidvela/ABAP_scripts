@@ -4,5 +4,7 @@ select single count( * ) from dbtab  where field = value.
 select single 'X' into @is_exists from tab where x eq y.
 
 
+* leading zeros: 
 
+l_vbeln = |{ l_key ALPHA = IN }|.
 
