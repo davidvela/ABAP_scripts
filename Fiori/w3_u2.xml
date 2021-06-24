@@ -1,0 +1,156 @@
+<!-- Step 1. Configuring the Compact Filters -->
+<Annotation Term="UI.SelectionFields">
+    <Collection>
+        <PropertyPath>CurrencyCode</PropertyPath>
+        <PropertyPath>AgencyID</PropertyPath>
+        <PropertyPath>AgencyName</PropertyPath>
+        <PropertyPath>CarrierID</PropertyPath>
+        <PropertyPath>CarrierName</PropertyPath>
+        <PropertyPath>CustomerID</PropertyPath>
+        <PropertyPath>CustomerName</PropertyPath>
+        <PropertyPath>BookingDate</PropertyPath>
+        <PropertyPath>BookingDateYear</PropertyPath>
+    </Collection>'
+</Annotation>   
+<!-- Step 3. Configuring the visual filters of type line -->
+<!--  UI.Chart and UI.PresentationVariant and common.valuelist  -->
+<Annotation Term="UI.Chart" Qualifier="FilterFlightPriceBookingDateYear">
+    <Record Type="UI.ChartDefinitionType">
+        <PropertyValue Property="Title" String="Filter FlightPrice By BookingDateYear"/>
+        <PropertyValue Property="Description" String="Filter FlightPrice By BookingDateYear "/>
+        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+        <PropertyValue Property="Dimensions">
+            <Collection>
+                <PropertyPath>BookingDateYear</PropertyPath>
+            </Collection>
+        </PropertyValue>
+        <PropertyValue Property="Measures">
+            <Collection>
+                <PropertyPath>FlightPrice</PropertyPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+<Annotation Term="UI.PresentationVariant" Qualifier="PVFilterFlightPriceBookingDateYear">
+    <Record Type="UI.PresentationVariantType">
+        <PropertyValue Property="Visualizations">
+            <Collection>
+                <AnnotationPath>@UI.Chart#FilterFlightPriceBookingDateYear</AnnotationPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+
+ <Annotations Target="cds_zfe_booking_analytics_######.BookingType/BookingDateYear">
+     <Annotation Term="Common.ValueList">
+         <Record Type="Common.ValueListType">
+             <PropertyValue Property="CollectionPath" String="Booking"/>
+             <PropertyValue Property="PresentationVariantQualifier" String="PVFilterFlightPriceBookingDateYear"/>
+             <PropertyValue Property="Parameters">
+                 <Collection>
+                     <Record Type="Common.ValueListParameterInOut">
+                         <PropertyValue Property="LocalDataProperty" PropertyPath="BookingDateYear"/>
+                         <PropertyValue Property="ValueListProperty" String="BookingDateYear"/>
+                     </Record>
+                 </Collection>
+             </PropertyValue>
+         </Record>
+     </Annotation>
+ </Annotations>
+
+<!-- Step 4. Configuring the Visual Filters of type Donut Chart -->
+<!--  UI.Chart and UI.PresentationVariant and common.valuelist -->
+
+<Annotation Term="UI.Chart" Qualifier="FilterFlightPriceCustomerID">
+    <Record Type="UI.ChartDefinitionType">
+        <PropertyValue Property="Title" String="Filter FlightPrice By CustomerID"/>
+        <PropertyValue Property="Description" String="Filter FlightPrice By CustomerID"/>
+        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+        <PropertyValue Property="Dimensions">
+            <Collection>
+                <PropertyPath>CustomerID</PropertyPath>
+            </Collection>
+        </PropertyValue>
+        <PropertyValue Property="Measures">
+            <Collection>
+                <PropertyPath>FlightPrice</PropertyPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+<Annotation Term="UI.PresentationVariant" Qualifier="PVFilterFlightPriceCustomerID">
+    <Record Type="UI.PresentationVariantType">
+        <PropertyValue Property="Visualizations">
+            <Collection>
+                <AnnotationPath>@UI.Chart#FilterFlightPriceCustomerID</AnnotationPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+
+
+<Annotations Target="cds_zfe_booking_analytics_######.BookingType/CustomerID">
+     <Annotation Term="Common.ValueList">
+         <Record Type="Common.ValueListType">
+             <PropertyValue Property="CollectionPath" String="Booking"/>
+             <PropertyValue Property="PresentationVariantQualifier" String="PVFilterFlightPriceCustomerID"/>
+             <PropertyValue Property="Parameters">
+                 <Collection>
+                     <Record Type="Common.ValueListParameterInOut">
+                         <PropertyValue Property="LocalDataProperty" PropertyPath="CustomerID"/>
+                         <PropertyValue Property="ValueListProperty" String="CustomerID"/>
+                     </Record>
+                 </Collection>
+             </PropertyValue>
+         </Record>
+     </Annotation>
+ </Annotations>
+
+<!-- Step 5. Configuring the Visual Filters of type Bar Chart -->
+ <!-- UI.Chart and UI.PresentationVariant and common.valuelist annotation -->
+
+<Annotation Term="UI.Chart" Qualifier="FilterFlightPriceAgencyID">
+        <Record Type="UI.ChartDefinitionType">
+            <PropertyValue Property="Title" String="Filter FlightPrice By AgencyID"/>
+            <PropertyValue Property="Description" String="Filter FlightPrice By AgencyID"/>
+            <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+            <PropertyValue Property="Dimensions">
+                <Collection>
+                    <PropertyPath>AgencyID</PropertyPath>
+                </Collection>
+            </PropertyValue>
+            <PropertyValue Property="Measures">
+                <Collection>
+                    <PropertyPath>FlightPrice</PropertyPath>
+                </Collection>
+            </PropertyValue>
+        </Record>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant" Qualifier="PVFilterFlightPriceAgencyID">
+        <Record Type="UI.PresentationVariantType">
+            <PropertyValue Property="Visualizations">
+                <Collection>
+                    <AnnotationPath>@UI.Chart#FilterFlightPriceAgencyID</AnnotationPath>
+                </Collection>
+            </PropertyValue>
+        </Record>
+    </Annotation>
+ <Annotations Target="cds_zfe_booking_analytics_######.BookingType/AgencyID">
+     <Annotation Term="Common.ValueList">
+         <Record Type="Common.ValueListType">
+             <PropertyValue Property="CollectionPath" String="Booking"/>
+             <PropertyValue Property="PresentationVariantQualifier" String="PVFilterFlightPriceAgencyID"/>
+             <PropertyValue Property="Parameters">
+                 <Collection>
+                     <Record Type="Common.ValueListParameterInOut">
+                         <PropertyValue Property="LocalDataProperty" PropertyPath="AgencyID"/>
+                         <PropertyValue Property="ValueListProperty" String="AgencyID"/>
+                     </Record>
+                 </Collection>
+             </PropertyValue>
+         </Record>
+     </Annotation>
+ </Annotations>
+
+<!-- Step 7. Add a default value to a filter field -->
+

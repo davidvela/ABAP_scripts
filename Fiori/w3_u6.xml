@@ -1,0 +1,45 @@
+<!-- Using XML annotation LSP for defining advanced UI features -->
+<!-- Step 1. Display numeric values as a bullet chart  -->
+
+
+
+<!-- Step 2. Display value list in the filter field  -->
+           
+           <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="Alphabetical_list_of_products" />
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="ProductName" />
+                                <PropertyValue Property="ValueListProperty" String="ProductName" />
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+
+
+<Annotation Term="Common.ValueListWithFixedValues" />
+
+<!-- Step 3. Hide irrelevant default features -->
+   <Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Products">
+        <Annotation Term="Capabilities.SearchRestrictions">
+                <Record Type="Capabilities.SearchRestrictionsType">
+                    <PropertyValue Property="Searchable" Bool="false" />
+                </Record>
+            </Annotation>
+    </Annotations>
+
+        <Annotation Term="Capabilities.DeleteRestrictions">
+                <Record Type="Capabilities.DeleteRestrictionsType">
+                    <PropertyValue Property="Deletable" Bool="false" />
+                </Record>
+            </Annotation>
+        
+        <Annotation Term="Capabilities.InsertRestrictions">
+                <Record Type="Capabilities.InsertRestrictionsType">
+                    <PropertyValue Property="Insertable" Bool="false" />
+                </Record>
+            </Annotation>
+        </Annotations>
