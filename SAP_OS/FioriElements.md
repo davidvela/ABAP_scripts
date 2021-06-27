@@ -55,8 +55,46 @@ table bookings: LINE ITEM REFERENCE
 **Feature Map**
 Define and Adaptatins 
 
-## W3 - Analytical List Page
+## W3 - Analytical List Page (ALP), Overview Page
 * Analytical List Page:
 https://sapui5.hana.ondemand.com/#/topic/3d33684b08ca4490b26a844b6ce19b83
 * Overview Pages:
 https://sapui5.hana.ondemand.com/#/topic/c64ef8c6c65d4effbfd512e9c9aa5044
+
+### ALP
+guided development 
+XML Annotations 
+1. table -> @UI.LineItem 
+2. chart -> @UI.Chart ALP -> title, entity, properties... 
+3. Filter -> @UI.SelectionFields
+4. Visual Filter -> @UI.Chart, UI.PresentationVariant
+    1. chart -> Qualifier 
+    2. presentation variant -> 
+    3. Mapping: Booking type, booking year ... 
+5. Common.FilterDefaultValue = 2021
+
+### Overview Page -> Cards
+1. create overview page: 5 steps 
+    1. step: entity type ... 
+    2. presentation variant -> Flight price, 
+    3. ... 
+    4. UI.identification -> navigation booking analysis 
+    5. anlaytical pccard parameters -> Booking, Spending on Flights ... => JSON
+2. add Odata V4 -> Manifest -> add new service 
+    1. Create local annotation file 
+3. add table card to an overview page based on OData v4: 6 steps
+    1. select entity, data point parameters 
+    2. Qualifiers: AcceptedTravels and rejectedTravels, column parameters, DataFieldAnnotation, -- Line Items, 
+    3. Filters: SelectOptions
+    4. UI.Identification -> collection 
+    5. card file settings: title, entity, ... JSON
+    6. card tabs JSON: Accepted, Rejected, Open/In Progress 
+4. add Quick Links card and chart card ... 
+
+
+### deploy apps
+
+
+
+
+
