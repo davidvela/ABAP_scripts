@@ -93,8 +93,29 @@ XML Annotations
 
 
 ### deploy apps
+deployee 3 apps. 
 
 
 
 
+# W4 Extending a Standard SAP Fiori App
+* SAPUI5 flexibility documentation "All you need to know"
+https://help.sap.com/viewer/UI5_Flex
+* Video SAPUI5 Flexibility – Key User Adaptation
+https://www.youtube.com/watch?v=VrFVB1b4kAI
+* openSAP Microlearning: Adapting the UI of List Report Apps - SAP S/4HANA User Experience
+https://microlearning.opensap.com/media/socialsharingtw/1_lm5i2aj9
+* SAPUI5 flexibility Demo Apps
 
+* SAPUI5 flexibility Road Map
+
+* Enable your own custom apps for SAPUI5 flexibility
+https://ui5.sap.com/#/topic/f51dbb78e7d5448e838cdc04bdf65403
+
+
+## Adapting the App from the UI -> Key Users 
+
+## Adaptation Project 
+manifest.appdescr_variant file.
+
+Extending apps as a developer: fragment and controller : Advance extensions
