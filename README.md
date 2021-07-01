@@ -7,6 +7,7 @@
 * Data ingestion code 
 * HTTP calls 
 * Parsers (JSON and XML)
+* Fiori (CDS + XML Annotations)
 
 # abap git
 https://github.com/abapGit/abapGit
