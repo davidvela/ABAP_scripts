@@ -1,0 +1,112 @@
+<!-- Building an SAP Fiori elements app with an external OData service 
+ Application Generator.
+ Floorplan Selection , select the tile List Report Object Page
+ OData v2 = https://services.odata.org/V2/Northwind/Northwind.svc/.
+Module name : foodandbev
+
+Application title : Food and Beverages
+Application Namespace : sap.fe.demo
+Description : Food and beverages for serving on board
+Project folder path : when working in SAP business application studio, choose folder path /home/user/projects. You can choose a different path but make sure it is the same as for all the other applications during this course
+-->
+            <Annotation Term="UI.SelectionFields">
+                <Collection>
+                    <PropertyPath>ProductName</PropertyPath>
+                </Collection>
+            </Annotation>
+
+               <Annotation Term="UI.LineItem">
+                <Collection>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ProductID" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ProductName" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="QuantityPerUnit" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ReorderLevel" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="UnitsInStock" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="UnitPrice" />
+                    </Record>
+                </Collection>
+            </Annotation>
+        
+        <Annotations Target="NorthwindModel.Product/ProductName">
+            <Annotation Term="Common.Label" String="Product"/>
+        </Annotations>
+
+          <Annotations Target="NorthwindModel.Product/ProductName">
+            <Annotation Term="Common.Label" String="{@i18n>product}"/>
+        </Annotations>
+
+          <Annotations Target="NorthwindModel.Product/ProductID">
+            <Annotation Term="Common.Text" Path="ProductName"/>
+        </Annotations>
+
+             <Annotation Term="Common.SemanticKey">
+                <Collection>
+                    <PropertyPath>ProductID</PropertyPath>
+                </Collection>
+            </Annotation>
+
+            <Record Type="UI.DataField">
+                <PropertyValue Property="Value" Path="ProductID"/>
+                <PropertyValue Property="Label" String="{@i18n>product}"/>
+            </Record>
+
+             <Record Type="UI.DataField">
+                <PropertyValue Property="Value" Path="QuantityPerUnit"/>
+                <PropertyValue Property="Label" String="Quantity per Unit"/>
+            </Record>
+
+            <Record Type="UI.DataField">
+                <PropertyValue Property="Value" Path="QuantityPerUnit" />
+                <PropertyValue Property="Label" String="{@i18n>quantityPerUnit}"/>
+            </Record>
+
+             <Annotation Term="UI.LineItem">
+                <Collection>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ProductID" />
+                        <PropertyValue Property="Label" String="{@i18n>product}" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="QuantityPerUnit" />
+                        <PropertyValue Property="Label" String="{@i18n>quantityPerUnit}" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ReorderLevel" />
+                        <PropertyValue Property="Label" String="{@i18n>reorderLevel}" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="UnitsInStock" />
+                        <PropertyValue Property="Label" String="{@i18n>unitsInStock}" />
+                    </Record>
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="UnitPrice" />
+                        <PropertyValue Property="Label" String="{@i18n>unitPrice}" />
+                    </Record>
+                </Collection>
+            </Annotation>
+
+            <Annotation Term="UI.HeaderInfo" >
+            <Record Type="UI.HeaderInfoType">
+                <PropertyValue Property="TypeName" String="{@i18n>product}"/>
+                <PropertyValue Property="TypeNamePlural" String="Products"/>
+            </Record>
+        </Annotation>
+
+
+               <Annotation Term="UI.HeaderInfo" >
+            <Record Type="UI.HeaderInfoType">
+                <PropertyValue Property="TypeName" String="{@i18n>product}"/>
+                <PropertyValue Property="TypeNamePlural" String="{@i18n>products}"/>
+            </Record>
+        </Annotation>

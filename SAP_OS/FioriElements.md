@@ -106,14 +106,14 @@ https://www.youtube.com/watch?v=VrFVB1b4kAI
 * openSAP Microlearning: Adapting the UI of List Report Apps - SAP S/4HANA User Experience
 https://microlearning.opensap.com/media/socialsharingtw/1_lm5i2aj9
 * SAPUI5 flexibility Demo Apps
-
 * SAPUI5 flexibility Road Map
-
 * Enable your own custom apps for SAPUI5 flexibility
 https://ui5.sap.com/#/topic/f51dbb78e7d5448e838cdc04bdf65403
 
-
 ## Adapting the App from the UI -> Key Users 
+key user role  (v>=.1.38)
+**adapt UI**
+made changes and save them as view ... 
 
 ## Adaptation Project 
 manifest.appdescr_variant file.
