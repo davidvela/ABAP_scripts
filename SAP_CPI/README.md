@@ -60,7 +60,7 @@ Maven project:
 
 ## REST API 
 
-# CPI / PI 
+# CPI 
 change ESR in SAP : 
 SPROXY -> Utilities -> settings -> Proxy Generation tab -> option: Enterprise Service Browser = ESR Browser
 
@@ -79,6 +79,14 @@ Camel Adapters:
 https://github.com/apache/camel/tree/master/components
 https://camel.apache.org/components/latest/
 
+# SQL, MySQL - JDBC
+https://blogs.sap.com/2018/02/06/how-to-set-up-a-jdbc-connection-using-the-cloud-connector/
+https://answers.sap.com/questions/13010248/how-to-address-sql-database-in-backend-with-sap-cp.html
+https://blogs.sap.com/2019/02/19/cloud-integration-a-simple-demo-scenario-using-the-jdbc-adapter/
+https://hevodata.com/learn/rest-api-to-mysql-2-easy-methods/
+https://blog.logrocket.com/node-js-express-js-mysql-rest-api-example/
+
+# PI
 
 ## SOAP -- tocdes
 https://answers.sap.com/questions/2434806/xi-monitoring-transaction-code.html
