@@ -1,0 +1,20 @@
+version: 0.0.1
+apimServiceName: myAPIMService
+apis:
+    - name: myAPI
+      type: http
+      description: myFirstAPI
+      serviceUrl: http://myApiBackendUrl.com
+      # openApiSpec: C:\temp\_API_M\myAPIMService\OpenApiSpecs_swaggerPetstore.json
+      openApiSpec: ..\..\..\Schindler_APIM\api-definitions\api5_dvt\OpenApiSpecs_swaggerPetstore.json
+      suffix: conf
+      subscriptionRequired: true
+      isCurrent: true
+      apiVersion: v1
+      apiVersionDescription: My first version basic attributes
+      apiVersionSetId: myAPIVersionSetID
+      apiRevision: 1
+      apiRevisionDescription: My first revision
+# outputLocation: C:\temp\_API_M\myAPIMService\GeneratedTemplates
+outputLocation: ..\..\..\Schindler_APIM\api-definitions\api5_dvt\
+linked: false
