@@ -14,3 +14,5 @@ https://developers.sap.com/tutorials/abap-environment-create-cds-view.html
 
 ## Create and Expose CDS Views (Unmanaged Scenario)
 https://developers.sap.com/group.abap-env-cds.html
+
+https://developers.sap.com/tutorials/abap-dev-adt-create-cds-view.html
